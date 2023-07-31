@@ -1,0 +1,540 @@
+/* Color scheme: https://colorhunt.co/palette/bfccb57c96abb7b7b7edc6b1 */
+
+/* Sizing */
+.container {
+    margin: 0 auto;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;    
+    width: 100%;
+    background-color: #BFCCB5;
+    padding: 1rem;
+    top: 0px;
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+}
+
+nav .container .logo{
+    /* flex: 1 is short-hand for flex-grow, flex-shrink and flex-basis combined. */
+    
+    /* If an element has flex: 1, it signifies that the width of all other elements 
+    will be the same as their content, but the element with flex: 1 
+    will be given the remaining full space */
+    flex: 1;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #596550;
+}
+
+nav li{
+    display: inline;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+a:link, a:visited {
+    background-color: #94a884;
+    color: white;
+    padding: 1rem;    
+    text-decoration: none;
+    display: inline-block;
+    width: 7.5rem;
+    text-align: center;
+  }
+  
+  a:hover, a:active {
+    background-color: #9bc579;
+  }
+
+  
+  @media only screen and (max-width: 732px) {
+    nav .container .logo{
+        display: none;
+    }
+
+    nav .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+   @media only screen and (max-width: 670px) {
+    nav .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav li{
+        display: inline;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    
+    a:link, a:visited {
+        background-color: #94a884;
+        color: white;
+        padding: 1rem;    
+        text-decoration: none;
+        display: inline-block;
+        width: 7.5rem;
+        text-align: center;
+      }
+}
+
+@media only screen and (max-width: 542px) {
+    nav{
+        padding: 1.9rem;
+      }
+    
+    a:link, a:visited {
+        background-color: #BFCCB5;
+        color: #596550;
+        padding: 0rem;    
+        text-decoration: none;
+        display: inline;
+        width: 0rem;
+        text-align: center;
+        font-size: 1.3rem;
+      }
+
+      nav li{
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;        
+        font-weight: bold;
+    }
+}
+
+/* Main (top margin set to offset navbar) */
+main{
+    margin-top: 5rem;
+}
+
+/* Hero Image & Title */
+.hero-section{             
+    height: 40rem;
+    background-image: url("./img/produce.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .container{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    font-size: 1.8rem;
+}
+
+/* Mission Statement / Company profile */
+.mission{
+    background-color: #7C96AB;
+    color: white;
+    height: 55rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
+
+.mission .container{    
+    width: 100%;
+    height: 42rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;    
+}
+
+.mission .container .mission-image{    
+    background-color: #567189;
+    height: 42rem;
+    width: 30rem;
+}
+
+.mission .container .mission-image img{
+    display: inline-block;
+    height: 42rem;
+    width: 30rem;
+    padding: 1rem;
+}
+
+.mission .container .mission-statement{    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+    height: 42rem;
+    width: 30rem;
+    background-color: #567189;
+    padding: 2rem;
+}
+
+.mission .container .mission-statement h1, h3{
+    text-align: center;
+}
+
+@media only screen and (max-width: 1053px) {
+    .mission .container{    
+        width: 100%;
+        height: 42rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .mission .container .mission-image{    
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 495px) {
+    .mission{
+        height: 70rem;
+    }
+    
+    .mission .container .mission-statement{
+        height: 65rem;
+    }
+
+    .mission .container .mission-statement h3{
+        display: none;
+    }
+}
+
+/* Accepted Donation cards (perishable, non-perishable, Pet Food, Toiletries) */
+.donations{
+    background-color: #B7B7B7;
+    color: white;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.donations .title{
+    margin-top: 2rem;
+}
+
+.donations .container-desktop{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+[class*="tablet-row"]{
+    display: none;
+}
+
+[class*="mobile-row"]{
+    display: none;
+}
+
+.donations .donation-item-card{
+    width: 15rem;
+    height: 20rem;
+    background-color: #82a465;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 5px 5px #5b7246;
+    font-size: 1.2rem;
+}
+
+.donations .donation-item-card h3{
+    padding: 1rem;
+}
+
+.donations .donation-item-card img{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: 10rem;
+    width: 15rem;
+}
+
+.donations .donation-item-card p{
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+@media only screen and (max-width: 1560px) {
+    .donations .container-desktop {
+        display: none;
+    }
+
+    .donations{
+        height: 70rem;
+    }
+
+    .donations .title{        
+        margin-bottom: 2.5rem;
+    }
+
+    [class*="tablet-row"]{
+        width: 100%;
+        height: 30rem;
+        display: flex;
+        justify-content: space-evenly;        
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .donations{
+        height: 100rem;
+    }
+
+    [class*="tablet-row"]{
+        display: none;
+    }
+
+    .donations .title{        
+        margin-bottom: 2.5rem;
+    }
+
+    [class*="mobile-row"]{
+        width: 100%;
+        height: 30rem;
+        display: flex;        
+        justify-content: space-evenly;        
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .donations{
+        height: 130rem;
+    }
+
+    [class*="tablet-row"]{
+        display: none;
+    }
+
+    [class*="mobile-row"]{
+        display: none;
+    }
+
+    .donations .container-desktop{
+        width: 100%;
+        height: 120rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .donations .donation-item-card{
+        margin: 1rem 0;
+        padding-bottom: 1rem;
+    }
+
+    .donations .title{
+        font-size: 0.7rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* Info: Location & Hours */
+.info{
+    background-color: #EDC6B1;
+    color: white;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info .container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.info .container .content-box-map{
+    width: 25rem;
+    height: 23rem;
+    padding: 1rem;
+    background-color: #c6987f;
+}
+
+.info .container .content-box-map img{
+    width: 25rem;
+    height: 21rem;
+}
+
+.info .container .content-box-location{
+    width: 23rem;
+    height: 23rem;
+    padding: 1rem;
+    background-color: #c6987f;
+}
+
+.info .container .content-box-hours{
+    width: 23rem;
+    height: 23rem;
+    margin-left: 2rem;
+    padding: 1rem;
+    text-align: justify;
+    background-color: #c6987f;
+}
+
+@media only screen and (max-width: 1149px) {
+    .info .container .content-box-map{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .info{
+        height: 75rem;
+    }
+    
+    .info .container{
+        flex-direction: column;
+    }
+    
+    .info .container .content-box-map{
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+    .info .container .content-box-location{
+        width: 25rem;
+        margin-bottom: 1rem;
+    }
+    
+    .info .container .content-box-hours{        
+        margin-left: 0rem;
+        width: 25rem;
+    }
+}
+
+@media only screen and (max-width: 430px) {    
+    .info{
+        height: 60rem;
+    }
+    
+    .info .container .content-box-map img{
+        width: 20rem;
+        height: 16rem;
+    }
+    
+    .info .container .content-box-map{
+        width: 20rem;
+        height: 18rem;
+    }
+
+    .info .container .content-box-location{
+        width: 20rem;
+        height: 17rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.78rem;
+        justify-content: center;
+    }
+    
+    .info .container .content-box-hours{                
+        width: 20rem;
+        height: 17rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 0.78rem;
+        justify-content: center;
+    }
+}
+
+/* Contact */
+.contact{
+    height: 40rem;
+    background-image: url("./img/contact-image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.contact .container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact .container img{
+    height: 5rem;
+    width: 5rem;
+    margin-bottom: 1rem;
+}
+
+.contact .container .contact-card{
+    height: 20rem;
+    width: 20rem;
+    background-color: rgba(0, 0, 0, 0.634);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .contact{
+        height: 65rem;
+    }
+    
+    .contact .container{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Footer */
+footer{
+    background-color: #BFCCB5;
+    color: white;
+}
+
+footer .container{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    justify-content: space-evenly;
+    
+}
+
+footer .container p{
+    color: #5d6657;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 660px) {
+    footer .container p{
+        display: none;
+    }
+}
